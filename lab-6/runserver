@@ -1,0 +1,7 @@
+#! /bin/bash
+
+docker rm -f mysql
+docker run -d -p 3306:3306 --name mysql \
+  -v monitoring_data:/var/lib/mysql \
+  mysql:5.7
+docker ps
